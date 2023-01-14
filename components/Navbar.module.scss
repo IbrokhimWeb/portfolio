@@ -1,0 +1,19 @@
+@media (max-width:750px) {
+    .main {
+        padding: 0 2em !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+    }
+
+    .navigation {
+        position: absolute;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.925);
+        padding-top: 50px;
+        width: 100%;
+        height: 90vh;
+        top: 9vh;
+    }
+}
