@@ -5,8 +5,10 @@ import Navbar from './../components/Navbar';
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
-            <Navbar />
-            <Component {...pageProps} />
+            <main className="w-full container mx-auto">
+                <Navbar />
+                <Component {...pageProps} />
+            </main>
         </>
     )
 }
