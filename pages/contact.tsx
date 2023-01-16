@@ -1,36 +1,46 @@
+import { stringify } from "querystring";
 import { useState } from "react";
-import gsap from "gsap";
 import FormField from "../components/formField/FormField";
 
 
 const Contact: React.FC = () => {
+    const [data, setData] = useState({
+        name: '',
+        email: '',
+        number: '',
+        message: '',
+    });
 
-    const [name, setName] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-    const [number, setNumber] = useState<string>('');
-    const [message, setMessage] = useState<string>('');
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         e.preventDefault();
-        console.log(`
-        👨🏻‍💻 Kimdan: ${name}\n
-        📧 Pochta: ${email}\n
-        ☎️ Nomer: ${number}\n
-        🖇 Xabar: ${message}
-        `);
-        alert("Siz Kiritgan Malumotlar Adminga Yuborildi")
-
-        setName("");
-        setEmail("");
-        setNumber("");
-        setMessage("");
+        const { name, value } = e.target;
+        setData((prevData) => ({ ...prevData, [name]: value }));
     };
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const { name, email, number, message } = data;
+        let myText = `👨🏻‍💻 Kimdan: <b> ${name}</b> %0A`;
+        myText += `📧 Pochta: <b> ${email}</b> %0A`;
+        myText += `☎️ Nomer: <b> ${number}</b> %0A`;
+        myText += `🖇 Xabar: <b> ${message}</b> %0A`;
 
 
-
-
-
+        let api = new XMLHttpRequest();
+        api.open(
+            "GET",
+            `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage?chat_id=${process.env.NEXT_PUBLIC_CHAT_ID}&text=${myText}&parse_mode=html`,
+            true
+        );
+        api.send();
+        alert("Siz Kiritgan Malumotlar Adminga Yuborildi")
+        setData({
+            name: '',
+            email: '',
+            number: '',
+            message: '',
+        })
+    };
 
     return (
         <>
@@ -43,18 +53,19 @@ const Contact: React.FC = () => {
                     <form onSubmit={handleSubmit} className="mt-10">
                         <div className="flex justify-between max-2xl:block">
                             <section>
-                                <FormField label="Your Name" type="text" value={name} onChange={setName} />
-                                <FormField label="Your Email" type="email" value={email} onChange={setEmail} />
-                                <FormField label="Phone Number" type="text" value={number} onChange={setNumber} />
+                                <FormField label="Your Name" name="name" type="text" value={data.name} handleChange={handleChange} />
+                                <FormField label="Your Email" name="email" type="email" value={data.email} handleChange={handleChange} />
+                                <FormField label="Phone Number" name="number" type="text" value={data.number} handleChange={handleChange} />
                             </section>
                             <section className="flex flex-col text-gray-600">
                                 <label htmlFor="textarea">Type Your Message Here</label>
                                 <textarea
                                     required
                                     id="textarea"
-                                    value={message}
+                                    value={data.message}
                                     cols={80} rows={5}
-                                    onChange={(e) => setMessage(e?.target?.value)}
+                                    name="message"
+                                    onChange={handleChange}
                                     className="outline-none p-3 bg-transparent border-b-2 border-gray-600 mb-10"
                                 ></textarea>
                             </section>
