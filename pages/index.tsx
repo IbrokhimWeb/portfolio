@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                         </p>
                         <div className="flex items-center gap-5 mt-8">
                             <Link href="/about" className={`${s.button} w-[8em] h-[7vh] flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-[1.2rem] text-white`}>About Me</Link>
-                            <Link href="/contact" className={`${s.button} w-[8em] h-[7vh] flex items-center justify-center bg-green-500 hover:bg-green-600 text-[1.2rem]`}>Contact Me</Link>
+                            <a className={`${s.button} cursor-pointer w-[8em] h-[7vh] flex items-center font-semibold justify-center bg-green-500 hover:bg-green-600 hover:text-white text-[1.2rem]`}>Download SV</a>
                         </div>
                         <div className="flex items-center gap-6 mt-8">
                             <a href="">
