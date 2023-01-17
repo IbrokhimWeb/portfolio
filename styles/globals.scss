@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    background-color: black;
+    -webkit-font-smoothing: antialiased;
+    background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+    background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
+    // width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -15,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(38, 255, 0, 0.602);
+    background: rgba(38, 255, 0, 0.308);
     border-radius: 10px;
 
 }

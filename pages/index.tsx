@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
     return (
         <>
-            <main className={`${s.main} overflow-auto w-full h-[90vh] flex items-center justify-center`}>
+            <main className={`${s.main} w-full h-[90vh] flex items-center justify-center`}>
                 <div className={`${s.box} w-[80%] flex items-center justify-between`}>
                     <section className="mb-[10vh]">
                         <h1 className="text-[3.5rem] font-bold text-white" >Hi, I'm Ibrokhim!</h1>
