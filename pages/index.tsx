@@ -35,19 +35,19 @@ const Home: NextPage = () => {
                         </p>
                         <div className="flex items-center gap-5 mt-8">
                             <Link href="/about" className={`${s.button} w-[8em] h-[7vh] flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-[1.2rem] text-white`}>About Me</Link>
-                            <a onClick={e => { e.preventDefault() }} href="" className={`${s.button} cursor-pointer w-[8em] h-[7vh] flex items-center font-semibold justify-center bg-green-500 hover:bg-green-600 hover:text-white text-[1.2rem]`}>Download SV</a>
+                            <a href="" className={`${s.button} cursor-pointer w-[8em] h-[7vh] flex items-center font-semibold justify-center bg-green-500 hover:bg-green-600 hover:text-white text-[1.2rem]`}>Download SV</a>
                         </div>
                         <div className="flex items-center gap-6 mt-8">
-                            <a onClick={e => { e.preventDefault() }} target="_black" href="https://www.youtube.com/cyber_step1">
+                            <a target="_black" href="https://www.youtube.com/cyber_step1">
                                 <BsYoutube className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a onClick={e => { e.preventDefault() }} target="_black" href="https://github.com/IbrokhimWeb">
+                            <a target="_black" href="https://github.com/IbrokhimWeb">
                                 <BsGithub className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a onClick={e => { e.preventDefault() }} target="_black" href="https://www.instagram.com/ibrokhimweb/">
+                            <a target="_black" href="https://www.instagram.com/ibrokhimweb/">
                                 <FiInstagram className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a onClick={e => { e.preventDefault() }} target="_black" href="https://t.me/s/cyber_step">
+                            <a target="_black" href="https://t.me/s/cyber_step">
                                 <FaTelegramPlane className="text-white text-[2rem] hover:text-green-500" />
                             </a>
                         </div>
