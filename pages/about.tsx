@@ -25,7 +25,7 @@ const About = () => {
                     </section>
                     <section className={`${s.description} text-white px-10 w-[60%] flex flex-col`}>
                         <h1 className={`${s} text-[4rem] font-bold`} >About Me!</h1>
-                        <p className={`${s} text-[1.4rem] text-gray-500`}>Hello my dears! I am Ibrokhim Ergashov, {calculateAge(birthDate) + " "} years old. I am from Tashkent, Uzbekistan and currently live in Parkent, Tashkent region. So, I have been learning programming since 2019 and completed my full education as a model student at Astrum IT Academy from 2020 to early 2023!</p>
+                        <p className={`${s} text-[1.4rem] text-gray-500`}>Hello my dears! I am Ibrokhim Ergashov, {calculateAge(birthDate) + " "} years old. I am from Tashkent, Uzbekistan and currently live in Parkent, Tashkent region. So, I have been learning programming since 2020 and completed my full education as a model student at Astrum IT Academy from 2021 to early 2023!</p>
                         <h2 className={`${s} text-[1.6rem] font-bold my-3`}>Why I chose Front-End ?</h2>
                         <p className={`${s} text-[1.4rem] text-gray-500`}>I really enjoy writing code, it seems to calm my nerves. The reason I chose Front-End is that it seems to have a life</p>
                     </section>
