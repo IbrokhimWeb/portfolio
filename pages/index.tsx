@@ -38,16 +38,16 @@ const Home: NextPage = () => {
                             <a className={`${s.button} cursor-pointer w-[8em] h-[7vh] flex items-center font-semibold justify-center bg-green-500 hover:bg-green-600 hover:text-white text-[1.2rem]`}>Download SV</a>
                         </div>
                         <div className="flex items-center gap-6 mt-8">
-                            <a href="https://www.youtube.com/cyber_step1">
+                            <a target="" href="https://www.youtube.com/cyber_step1">
                                 <BsYoutube className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a href="https://github.com/IbrokhimWeb">
+                            <a target="" href="https://github.com/IbrokhimWeb">
                                 <BsGithub className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a href="https://www.instagram.com/ibrokhimweb/">
+                            <a target="" href="https://www.instagram.com/ibrokhimweb/">
                                 <FiInstagram className="text-white text-[2rem] hover:text-green-500" />
                             </a>
-                            <a href="https://t.me/s/cyber_step">
+                            <a target="" href="https://t.me/s/cyber_step">
                                 <FaTelegramPlane className="text-white text-[2rem] hover:text-green-500" />
                             </a>
                         </div>
