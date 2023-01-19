@@ -2,7 +2,7 @@
 const Portfolio = () => {
     return (
         <div>
-            My Portfolio
+            My  Portfolio
         </div>
     )
 }
